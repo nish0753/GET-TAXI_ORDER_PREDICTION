@@ -1,6 +1,6 @@
-# GET Taxi Order Prediction 🚖📊
+# Insights from Failed Orders �
 
-A data science project analyzing taxi orders from GET (Gett), focused on understanding order patterns, failure reasons, and building predictive insights for ride-hailing optimization. This is a comprehensive portfolio project demonstrating exploratory data analysis, visualization, and machine learning techniques using Python.
+A data science project analyzing failed taxi orders from Gett, aimed at finding actionable insights into why ride requests go unfulfilled. This is a practical, portfolio-ready example of exploratory data analysis, visualization, and spatial analytics using Python.
 
 ## Table of Contents
 - [Project Overview](#project-overview)
@@ -9,22 +9,20 @@ A data science project analyzing taxi orders from GET (Gett), focused on underst
 - [How to Run](#how-to-run)
 - [Analysis Steps](#analysis-steps)
 - [Key Findings](#key-findings)
-- [Machine Learning Models](#machine-learning-models)
 - [Tools Used](#tools-used)
 - [Future Enhancements](#future-enhancements)
 
 ## Project Overview
 
-GET (formerly Gett) is a leading ride-hailing platform that connects passengers with drivers. This project analyzes order patterns and failures to:
+Gett, a leading ride-hailing platform, experiences failed ride orders when customers' requests aren't matched or are canceled. The goal of this project is to:
 
-- **Understand order success/failure patterns** across different time periods
-- **Identify key factors** that lead to failed orders
-- **Analyze customer behavior** and waiting times
-- **Build predictive models** for order success probability
+- **Diagnose why orders fail** (cancellation types, system rejections)
+- **Identify when failures are most common** 
+- **Analyze how long customers wait** before canceling
+- **Visualize geospatial patterns** of failures
 - **Provide actionable insights** for business optimization
-- **Visualize spatial patterns** of order distribution
 
-The analysis focuses on transforming raw order data into meaningful business insights that can help improve customer satisfaction and operational efficiency.
+The analysis focuses on understanding failure patterns to help improve customer satisfaction and operational efficiency.
 
 ## Data
 
@@ -49,7 +47,7 @@ Maps orders to available offers:
 ## Project Structure
 
 ```
-GET-TAXI_ORDER_PREDICTION/
+INSIGHTS-FROM-FAILED-ORDERS/
 ├── README.md
 ├── Desktop/Datasets/GETT_PROJECT/
 │   ├── data_orders.csv              # Main orders dataset
@@ -95,8 +93,7 @@ GET-TAXI_ORDER_PREDICTION/
 
 ### 2. **Temporal Analysis**
 - Order distribution by hour of day, day of week
-- Seasonal patterns and trends
-- Peak hours identification
+- Peak failure hours identification
 - Success/failure rates over time
 
 ### 3. **Failure Analysis**
@@ -114,17 +111,11 @@ GET-TAXI_ORDER_PREDICTION/
 - Success rates by different factors
 - Customer satisfaction indicators
 
-### 5. **Geospatial Analysis (Advanced)**
-- Mapping order hotspots
+### 5. **Geospatial Analysis**
+- Mapping order hotspots using H3 hexagonal binning
 - Failure concentration areas
 - Spatial clustering of successful vs failed orders
 - Geographic performance variations
-
-### 6. **Predictive Modeling**
-- Feature engineering for ML models
-- Order success probability prediction
-- Model performance evaluation
-- Business impact quantification
 
 ## Key Findings
 
@@ -150,24 +141,6 @@ GET-TAXI_ORDER_PREDICTION/
 - **Success rate variation**: Some areas show consistently higher success rates
 - **Supply-demand imbalance**: Certain locations have chronic driver shortages
 
-## Machine Learning Models
-
-### **Predictive Models Built:**
-1. **Order Success Classifier**
-   - Predicts probability of successful order completion
-   - Features: Time, location, historical patterns, ETA
-   - Accuracy: X%
-
-2. **Cancellation Time Predictor**
-   - Estimates when a customer might cancel
-   - Helps optimize driver dispatch timing
-   - RMSE: X minutes
-
-3. **Demand Forecasting**
-   - Predicts order volume by location and time
-   - Enables proactive driver positioning
-   - Accuracy: X%
-
 ## Tools Used
 
 ### **Data Analysis & Processing:**
@@ -184,8 +157,7 @@ GET-TAXI_ORDER_PREDICTION/
 - **GeoJSON**: Geographic data formatting
 
 ### **Machine Learning:**
-- **Scikit-learn**: Classification and regression models
-- **XGBoost/LightGBM**: Advanced ensemble methods (if implemented)
+- **Future consideration**: Classification and regression models for predictive analytics
 
 ### **Development:**
 - **Git**: Version control
@@ -195,7 +167,7 @@ GET-TAXI_ORDER_PREDICTION/
 
 ### **Technical Improvements:**
 - [ ] Real-time data pipeline integration
-- [ ] Advanced ML models (Deep Learning, Time Series)
+- [ ] Machine learning models for prediction (Order success classifier, Demand forecasting)
 - [ ] A/B testing framework for interventions
 - [ ] API development for model deployment
 
@@ -216,9 +188,9 @@ GET-TAXI_ORDER_PREDICTION/
 ## 📊 Project Impact
 
 This analysis provides actionable insights for:
-- **Reducing order failure rates** by X%
-- **Improving customer satisfaction** through better wait time predictions
-- **Optimizing driver allocation** based on demand patterns
+- **Reducing order failure rates** through better understanding of failure patterns
+- **Improving customer satisfaction** through better wait time management
+- **Optimizing driver allocation** based on demand and failure patterns
 - **Enhancing business operations** with data-driven decision making
 
 ## 🤝 Contributing
